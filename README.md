@@ -1,4 +1,6 @@
-# rick-morty--uma
+# Characters of Rick & Morty
+
+A small sort- and filterable overview of 100 Rick and Morty characters.
 
 ## Project setup
 ```
@@ -25,5 +27,5 @@ npm run test:unit
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### License
+[MIT](https://choosealicense.com/licenses/mit/)
