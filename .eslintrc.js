@@ -2,17 +2,27 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    jest: true,
   },
   extends: [
     'plugin:vue/vue3-essential',
-    '@vue/airbnb',
+    'eslint:recommended',
   ],
   parserOptions: {
     parser: 'babel-eslint',
+    ecmaVersion: 6,
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-unused-vars': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'class-methods-use-this': 0,
+    'max-len': ['error', { code: 150, ignoreComments: true, ignoreUrls: true }],
+    'no-multi-str': 0,
+    'no-param-reassign': 0,
+    'comma-dangle': ['error', 'always-multiline'],
+    'semi': [2, 'never'],
+    'quotes': [2, 'single'],
   },
   overrides: [
     {
@@ -25,4 +35,4 @@ module.exports = {
       },
     },
   ],
-};
+}

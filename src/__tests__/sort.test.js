@@ -16,7 +16,7 @@ test('Overview shows default sort on startup', async () => {
 })
 
 test('Overview can be sorted by ascending name', async () => {
-  await wrapper.get('.controls__sort-selector').setValue('name')
+  await wrapper.get('.controls__sort .controls__selector').setValue('name')
   await wrapper.get('#asc').setValue(true)
 
   const names = wrapper.findAll('.card__name').map(n => n.text())
@@ -25,7 +25,7 @@ test('Overview can be sorted by ascending name', async () => {
 })
 
 test('Overview can be sorted by descending name', async () => {
-  await wrapper.get('.controls__sort-selector').setValue('name')
+  await wrapper.get('.controls__sort .controls__selector').setValue('name')
   await wrapper.get('#desc').setValue(true)
 
   const names = wrapper.findAll('.card__name').map(n => n.text())
@@ -34,7 +34,7 @@ test('Overview can be sorted by descending name', async () => {
 })
 
 test('Overview can be sorted by ascending episode', async () => {
-  await wrapper.get('.controls__sort-selector').setValue('first episode')
+  await wrapper.get('.controls__sort .controls__selector').setValue('first episode')
   await wrapper.get('#asc').setValue(true)
 
   const names = wrapper.findAll('.card__name').map(n => n.text())
@@ -43,7 +43,7 @@ test('Overview can be sorted by ascending episode', async () => {
 })
 
 test('Overview can be sorted by descending episode', async () => {
-  await wrapper.get('.controls__sort-selector').setValue('first episode')
+  await wrapper.get('.controls__sort .controls__selector').setValue('first episode')
   await wrapper.get('#desc').setValue(true)
 
   const names = wrapper.findAll('.card__name').map(n => n.text())
