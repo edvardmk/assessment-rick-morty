@@ -3,10 +3,10 @@ import App from '../App.vue'
 
 jest.mock('../api/characters')
 
-const wrapper = mount(App)
+let wrapper
 
 beforeEach(async () => {
-
+  wrapper = mount(App)
 })
 
 test('Overview is displaying name', async () => {
@@ -33,8 +33,4 @@ test('Overview is displaying episodes', async () => {
 test('Overview is displaying image', async () => {
   const imageSrc = wrapper.get('.card__image').attributes().src
   expect(imageSrc).toEqual('https://rickandmortyapi.com/api/character/avatar/1.jpeg')
-})
-
-afterEach(async () => {
-  // await page.close()
 })

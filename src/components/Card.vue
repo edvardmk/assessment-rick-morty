@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card bordered">
     <img class="card__image" :src="character.image" :alt="character.name">
     <div class="card__info">
       <h3 class="card__name">{{ character.name }}</h3>

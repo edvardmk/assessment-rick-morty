@@ -60,12 +60,42 @@ body {
   width: 80%;
 }
 
+.controls__sort-label {
+  margin-right: 1rem;
+}
+
+.controls__sort-selector {
+  background-color: var(--night);
+  color: var(--off-white);
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+.controls__sort-selector:hover {
+  background-color: var(--green);
+}
+
+.controls__sort-selector:focus {
+  outline: none;
+}
+
+.controls__sort .icon {
+  fill: var(--off-white);
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 0 0 -3px 0.8rem;
+}
+
+.controls__sort .icon:hover,
+.controls__sort-direction:checked + label .icon {
+  fill: var(--green);
+}
+
 .card {
   display: flex;
   align-items: center;
   padding: 2rem 3rem;
-  border: 2px solid var(--grey);
-  border-radius: 0.8rem;
   margin: 4rem 0;
 }
 
@@ -103,4 +133,13 @@ body {
 
 .card__episode:hover {
   background-color: var(--green);
+}
+
+.bordered {
+  border: 2px solid var(--grey);
+  border-radius: 0.8rem;
+}
+
+.hidden {
+  display: none;
 }
